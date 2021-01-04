@@ -16,36 +16,15 @@ resetButton.addEventListener('click', () => {
   allSpaces.forEach(space => {
     space.innerHTML = '';
     space.innerHTML = '';
-    space.classList.remove('o');
     space.classList.remove('x');
+    space.classList.remove('o');
   });
   turn = 0;
-  console.log('board: ', board);
-  console.log('allSpaces: ', allSpaces);
 });
 
 board.addEventListener('click', (e) => {
 
   if(turn%2 === 0) {
-    e.target.innerHTML = 'O';
-    e.target.classList.add('o');
-    if(
-      // horizontal check
-      space1.classList.contains('o') && space2.classList.contains('o') && space3.classList.contains('o') ||
-      space4.classList.contains('o') && space5.classList.contains('o') && space6.classList.contains('o') ||
-      space7.classList.contains('o') && space8.classList.contains('o') && space9.classList.contains('o') ||
-      // vertical check
-      space1.classList.contains('o') && space4.classList.contains('o') && space7.classList.contains('o') ||
-      space2.classList.contains('o') && space5.classList.contains('o') && space8.classList.contains('o') ||
-      space3.classList.contains('o') && space6.classList.contains('o') && space9.classList.contains('o') ||
-      // diagonal check
-      space1.classList.contains('o') && space5.classList.contains('o') && space9.classList.contains('o') ||
-      space7.classList.contains('o') && space5.classList.contains('o') && space3.classList.contains('o')
-    ) {
-      alert('O is winner!');
-    }
-    turn++;
-  } else {
     e.target.innerHTML = 'X';
     e.target.classList.add('x');
     if(
@@ -62,6 +41,25 @@ board.addEventListener('click', (e) => {
       space7.classList.contains('x') && space5.classList.contains('x') && space3.classList.contains('x')
     ) {
       alert('X is winner!');
+    }
+    turn++;
+  } else {
+    e.target.innerHTML = 'O';
+    e.target.classList.add('o');
+    if(
+      // horizontal check
+      space1.classList.contains('o') && space2.classList.contains('o') && space3.classList.contains('o') ||
+      space4.classList.contains('o') && space5.classList.contains('o') && space6.classList.contains('o') ||
+      space7.classList.contains('o') && space8.classList.contains('o') && space9.classList.contains('o') ||
+      // vertical check
+      space1.classList.contains('o') && space4.classList.contains('o') && space7.classList.contains('o') ||
+      space2.classList.contains('o') && space5.classList.contains('o') && space8.classList.contains('o') ||
+      space3.classList.contains('o') && space6.classList.contains('o') && space9.classList.contains('o') ||
+      // diagonal check
+      space1.classList.contains('o') && space5.classList.contains('o') && space9.classList.contains('o') ||
+      space7.classList.contains('o') && space5.classList.contains('o') && space3.classList.contains('o')
+    ) {
+      alert('O is winner!');
     }
     turn++;
   }

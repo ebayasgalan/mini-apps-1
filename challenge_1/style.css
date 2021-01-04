@@ -9,6 +9,8 @@ body {
 }
 
 .container {
+  position: relative;
+  height: 400px;
   width: 300px;
   overflow: auto;
   margin: 50px auto;
@@ -21,9 +23,8 @@ body {
   width: 60px;
   height: 30px;
   list-style: none;
-  border: 2px solid black;
+  border: 3px solid black;
   text-align: center;
-  cursor: pointer;
 }
 
 .o {
@@ -34,4 +35,24 @@ body {
 .x {
   background-color: blue;
   color: white;
+}
+
+.board li:hover, .reset:hover {
+  cursor: pointer;
+  border-color: orange;
+}
+
+.reset {
+  position: absolute;
+  top: 12.5rem;
+  left: 5.2rem;
+  width: 120px;
+  margin: 20px auto;
+  border-radius: .3rem;
+  font-size: 20px;
+}
+
+.reset:hover {
+  color: white;
+  background-color: orange;
 }
