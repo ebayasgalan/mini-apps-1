@@ -15,9 +15,7 @@ resetButton.addEventListener('click', () => {
   const allSpaces = document.querySelectorAll('li');
   allSpaces.forEach(space => {
     space.innerHTML = '';
-    space.innerHTML = '';
-    space.classList.remove('x');
-    space.classList.remove('o');
+    space.classList.remove('x', 'o');
   });
   turn = 0;
 });
