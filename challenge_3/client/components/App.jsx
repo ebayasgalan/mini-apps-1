@@ -1,8 +1,9 @@
 import React from 'react';
+import Form from './Form1.jsx';
 
 const Hello = () => {
   return (
-    <div>Hello World from App.jsx</div>
+    <Form />
   )
 }
 
