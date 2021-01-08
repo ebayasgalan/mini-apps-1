@@ -9,21 +9,23 @@ class Form1 extends React.Component {
   }
   render() {
     return (
-      <form method="post" action="/">
-        <label htmlFor="username">
-          Name:
+      <div>
+        <form method="post" action="/">
+          <label htmlFor="username">
+            Name:
           <input id="username" type='text' name="name" required></input>
-        </label>
-        <label htmlFor="email">
-          Email:
+          </label>
+          <label htmlFor="email">
+            Email:
           <input id="email" type='email' name="email" required></input>
-        </label>
-        <label htmlFor="pass">
-          Password:
+          </label>
+          <label htmlFor="pass">
+            Password:
           <input id="pass" type='password' name="password" required></input>
-        </label>
-        <input type='submit' value="Submit"></input>
-      </form>
+          </label>
+          <input type='submit' value="Submit"></input>
+        </form>
+      </div>
     )
   }
 }
